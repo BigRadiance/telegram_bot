@@ -1,0 +1,1 @@
+user_mini_tour_active = {}
