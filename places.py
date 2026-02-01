@@ -8,8 +8,8 @@ PLACES = {
         "photos": [
             "data/Photo/DramTeatr.jpg"
         ],
-        "lat": 53.897566,
-        "lon": 30.333230,
+        "lat": 53.897545,
+        "lon": 30.333266,
         "description": {
             "ru": (
                 "Могилёвский областной драматический театр — один из старейших "
@@ -86,8 +86,8 @@ Today Glory Square is not only a historical place but also an important cultural
             "data/Photo/SlavaSquare/SlavaSquare_2.jpg",
             "data/Photo/SlavaSquare/SlavaSquare_3.jpg"
         ],
-        "lat": 53.897566,
-        "lon": 30.332678
+        "lat": 53.894546,
+        "lon": 30.330630
     },
 
     "podnikolie": {
@@ -99,8 +99,8 @@ Today Glory Square is not only a historical place but also an important cultural
         "photos": [
             "data/Photo/Podnikole.jpg"
                    ],
-        "lat": 53.893251,
-        "lon": 30.340202,
+        "lat": 53.896055,
+        "lon": 30.338776,
         "description": {
             "ru": (
                 "Парк «Подниколье» — живописная зона отдыха в центре города: "

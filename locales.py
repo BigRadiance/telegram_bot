@@ -17,6 +17,7 @@ LOCALES = {
         "choose_language": "Выберите язык / Choose language / Абярыце мову:",
         "mini_tour_start": "Запускаем мини-тур по Могилёву!",
         "mini_tour_ready": "Маршрут по {count} достопримечательностям готов!",
+        "choose_map": "Выберите карту",
         "buttons": {
             "places": "Достопримечательности",
             "routes": "Маршруты",
@@ -27,6 +28,7 @@ LOCALES = {
             "yandex": "Яндекс Карты",
             "google": "Google Maps",
             "send_location": "📍 Отправьте геолокацию"
+
         }
     },
     "en": {
@@ -47,6 +49,7 @@ LOCALES = {
         "choose_language": "Выберите язык / Choose language / Абярыце мову:",
         "mini_tour_start": "Starting a mini-tour around Mogilev!",
         "mini_tour_ready": "Route through {count} attractions is ready!",
+        "choose_map": "Choose Map",
         "buttons": {
             "places": "Places",
             "routes": "Routes",
@@ -77,6 +80,7 @@ LOCALES = {
         "choose_language": "Выберите язык / Choose language / Абярыце мову:",
         "mini_tour_start": "Пачынаем міні-тур па Магілёве!",
         "mini_tour_ready": "Маршрут праз {count} славутасцяў гатовы!",
+        "choose_map": "Абярыце карту",
         "buttons": {
             "places": "Мясціны",
             "routes": "Маршруты",

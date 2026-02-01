@@ -1,15 +1,13 @@
 from aiogram import Router, types
 from places import PLACES
 from locales import LOCALES
-from state import user_mini_tour_active
+from state import user_mini_tour_active, user_languages, user_seen_places
 import math
+import time
 
 router = Router()
 
-# Хранилище языков и временных данных
-user_languages = {}
 user_selected_map = {}
-
 
 # ----------------------------------------
 # Формула Гаверсина
@@ -25,7 +23,7 @@ def haversine(lat1, lon1, lat2, lon2):
 
 
 # ----------------------------------------
-# Кнопки выбора карты
+# Кнопки выбора карты (inline)
 # ----------------------------------------
 def get_map_buttons(user_id: int, lang: str):
     buttons = LOCALES[lang]["buttons"]
@@ -78,8 +76,7 @@ async def mini_tour_start(callback: types.CallbackQuery):
 
 
 # ----------------------------------------
-# ФУНКЦИЯ обработки геолокации
-# Вызывается из start.py → unified_location_handler()
+# Обработка геолокации (мини-тур)
 # ----------------------------------------
 async def mini_tour_location(message: types.Message):
     user_id = message.from_user.id
@@ -88,7 +85,7 @@ async def mini_tour_location(message: types.Message):
     u_lat = message.location.latitude
     u_lon = message.location.longitude
 
-    # Сортировка мест
+    # Сортировка мест по расстоянию
     sorted_places = sorted(
         PLACES.items(),
         key=lambda x: haversine(u_lat, u_lon, x[1]["lat"], x[1]["lon"])
@@ -101,24 +98,38 @@ async def mini_tour_location(message: types.Message):
         "lang": lang
     }
 
-    # Отправляем список мест
-    places_text = "\n".join(user_selected_map[user_id]["names"])
+    # --- Сброс просмотренных достопримечательностей через час ---
+    now = time.time()
+    user_seen_places.setdefault(user_id, {})
+    lang_data = user_seen_places[user_id].get(lang)
+    if not lang_data or now - lang_data.get("timestamp", 0) > 3600:
+        user_seen_places[user_id][lang] = {"seen": set(), "timestamp": now}
 
+    # --- Формируем список с нумерацией ---
+    places_text = "\n".join(
+        f"📍{i + 1}. {name}" for i, name in enumerate(user_selected_map[user_id]["names"])
+    )
+
+    # Сообщение о готовности маршрута
     await message.answer(
         LOCALES[lang]["mini_tour_ready"].format(count=len(sorted_places))
     )
 
-    await message.answer(
-        LOCALES[lang].get("choose_map", "Выберите карту:"),
-        reply_markup=types.ReplyKeyboardRemove()
+    # Кнопка "В главное меню" после списка достопримечательностей
+    back_kb = types.ReplyKeyboardMarkup(
+        keyboard=[[types.KeyboardButton(text=LOCALES[lang]["buttons"]["back_menu"])]],
+        resize_keyboard=True,
+        one_time_keyboard=True
     )
 
+    # Отправляем список достопримечательностей с кнопкой "В главное меню"
+    await message.answer(places_text, reply_markup=back_kb)
+
+    # Отправляем inline-кнопки карт отдельно
     await message.answer(
-        places_text,
+        LOCALES[lang]["choose_map"],
         reply_markup=get_map_buttons(user_id, lang)
     )
-
-
 
 
 # ----------------------------------------
@@ -139,16 +150,25 @@ async def mini_tour_map(callback: types.CallbackQuery):
 
     # Формируем ссылку
     if map_type == "yandex":
-        link = "https://yandex.ru/maps/?rtext=" + "~".join(
-            f"{lat},{lon}" for lat, lon in coords
-        )
+        link = "https://yandex.ru/maps/?rtext=" + "~".join(f"{lat},{lon}" for lat, lon in coords)
     else:
-        link = "https://www.google.com/maps/dir/" + "/".join(
-            f"{lat},{lon}" for lat, lon in coords
-        )
+        link = "https://www.google.com/maps/dir/" + "/".join(f"{lat},{lon}" for lat, lon in coords)
 
     await callback.message.answer(link)
     await callback.answer(f"Открыть маршрут в {map_type.capitalize()}")
 
-    # Завершаем мини-тур
+
+# ----------------------------------------
+# Завершение мини-тура кнопкой "В главное меню"
+# ----------------------------------------
+@router.message(lambda m: m.text in (LOCALES[lang]["buttons"]["back_menu"] for lang in LOCALES))
+async def mini_tour_finish(message: types.Message):
+    user_id = message.from_user.id
     user_mini_tour_active[user_id] = False
+
+    lang = user_languages.get(user_id, "ru")
+    # Убираем клавиатуру и возвращаем меню
+    await message.answer(
+        text=LOCALES[lang]["welcome"],
+        reply_markup=types.ReplyKeyboardRemove()
+    )

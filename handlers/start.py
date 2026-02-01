@@ -2,26 +2,21 @@ from aiogram import Router, types, F
 from aiogram.filters import Command
 from locales import LOCALES
 from places import PLACES
-from state import user_mini_tour_active
 from handlers.mini_tour import mini_tour_location
+from state import (
+    user_languages,
+    user_mini_tour_active,
+    user_seen_places,
+    user_selected_map,
+    user_selected_place,
+    user_showing_places
+)
+
+import time
 
 import asyncio
 
 router = Router()
-
-user_languages = {}
-user_selected_map = {}
-
-# user_id → множество просмотренных достопримечательностей
-user_seen_places = {}
-
-# user_id → выбранное место (для маршрута)
-user_selected_place = {}
-
-# флаг, показывает, что пользователю в данный момент показывают места
-# user_id -> bool
-user_showing_places = {}
-
 
 # ----------------------------
 # /start -> выбор языка
@@ -170,13 +165,23 @@ async def show_places(callback: types.CallbackQuery):
 
     # 1) Отправляем начало
     # Инициализация просмотренных мест
-    user_seen_places.setdefault(user_id, {}).setdefault(lang, set())
+    now = time.time()
+
+    user_seen_places.setdefault(user_id, {})
+    lang_data = user_seen_places[user_id].get(lang)
+
+    # если первый раз или прошёл час — сбрасываем
+    if not lang_data or now - lang_data["timestamp"] > 3600:
+        user_seen_places[user_id][lang] = {
+            "seen": set(),
+            "timestamp": now
+        }
 
     for place_id, place in PLACES.items():
         if not user_showing_places.get(user_id):
             break
 
-        if place_id in user_seen_places[user_id][lang]:
+        if place_id in user_seen_places[user_id][lang]["seen"]:
             continue
 
         caption = place["name"][lang]
@@ -216,9 +221,10 @@ async def show_places(callback: types.CallbackQuery):
             else:
                 await callback.message.answer(part)
 
-        user_seen_places[user_id][lang].add(place_id)
+        user_seen_places[user_id][lang]["seen"].add(place_id)
 
-        await asyncio.sleep(0.5)
+
+        await asyncio.sleep(5)
 
     user_showing_places[user_id] = False
 
