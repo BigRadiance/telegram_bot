@@ -338,8 +338,21 @@ async def build_route(message: types.Message):
 
     link = yandex if map_type == "yandex" else google
 
+    # --- Убираем предыдущую клавиатуру и отправляем сообщение о готовности маршрута ---
     await message.answer(LOCALES[lang]["route_ready"], reply_markup=types.ReplyKeyboardRemove())
-    await message.answer(link)
+
+    # --- Кнопка "В главное меню" ---
+    back_kb = types.ReplyKeyboardMarkup(
+        keyboard=[[types.KeyboardButton(text=LOCALES[lang]["buttons"]["back_menu"])]],
+        resize_keyboard=True,
+        one_time_keyboard=True
+    )
+
+    # --- Отправляем ссылку на маршрут с кнопкой ---
+    await message.answer(link, reply_markup=back_kb)
+
+
+
 
 
 
