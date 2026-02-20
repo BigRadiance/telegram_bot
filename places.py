@@ -35,56 +35,36 @@ PLACES = {
             "be": "Плошча Славы"
         },
         "description": {
-            "ru": """Площадь Славы — центральная и одна из самых значимых исторических площадей Могилёва. Она объединяет в себе архитектуру разных эпох и тесно связана с героическими страницами истории города.
-История площади
-Площадь Славы возникла на месте древнего городского центра. В разные периоды она называлась по-разному: Рыночная, Губернаторская, Советская. Здесь проходили ярмарки, народные собрания, официальные церемонии, зачитывались указы и принимались важные для города решения. Площадь всегда была «сердцем» Могилёва, где сосредотачивалась общественная и политическая жизнь.
-В XVII–XVIII веках площадь формировалась как административный центр города с ратушей — символом городского самоуправления во времена Магдебургского права. Именно отсюда управлялся Могилёв как крупный торговый и ремесленный центр.
-Архитектурный облик
-Сегодня Площадь Славы отличается строгой и торжественной архитектурой. Главным её украшением является Могилёвская ратуша, восстановленная в начале XXI века. Рядом расположены здания бывших административных учреждений, выполненные в классическом стиле. Пространство площади открытое и симметричное, что подчёркивает её мемориальный характер.
-Историческое событие
-Одним из самых значимых событий, связанных с Площадью Славы, являются события Великой Отечественной войны.
-В июле 1941 года Могилёв стал одним из ключевых пунктов обороны на пути немецко-фашистских войск. Город героически оборонялся около трёх недель, сковывая силы противника. На площади проходили митинги, на которых горожанам объявляли о начале войны, формировании народного ополчения и необходимости защиты города.
-После освобождения Могилёва в 1944 году Площадь Славы стала местом торжественных митингов в честь победы, а позже — пространством памяти. Здесь проводятся церемонии, посвящённые Дню Победы, возложение цветов и минуты молчания в память о погибших защитниках города.
-Значение сегодня
-Сегодня Площадь Славы — это не только историческое место, но и важный культурный центр. Здесь проходят государственные праздники, парады, концерты и памятные мероприятия. Площадь символизирует стойкость, мужество и историческую память жителей Могилёва.
-Архитектурный облик
-Площадь Славы отличается строгой, торжественной планировкой. Она имеет открытое пространство, которое подчёркивает её мемориальный характер. Архитектура площади сочетает элементы разных исторических периодов, но при этом сохраняет целостность ансамбля.
-Центральным архитектурным акцентом площади является Могилёвская ратуша — восстановленный памятник архитектуры, ставший визуальной доминантой пространства. Рядом расположены здания с классическими фасадами, которые формируют историческую застройку центра города и создают атмосферу старого Могилёва.
-Мемориальное значение
-Площадь Славы является местом памяти и скорби. Здесь проходят мероприятия, посвящённые Дню Победы, Дню освобождения Могилёва и другим памятным датам. Во время торжеств на площади собираются ветераны, представители власти, школьники и жители города, чтобы отдать дань уважения героям войны.
-Площадь символизирует не только военную славу, но и стойкость города, его способность восстанавливаться и развиваться после тяжёлых испытаний.
-Роль в современной жизни города
-Сегодня Площадь Славы — это не только мемориальное, но и общественное пространство. Здесь проходят городские праздники, концерты, культурные акции и официальные церемонии. Площадь является популярным местом прогулок как для жителей Могилёва, так и для туристов.
-Благодаря своему расположению и историческому значению Площадь Славы служит связующим звеном между прошлым и настоящим города, напоминая о его героической истории и одновременно оставаясь живым, динамичным центром городской жизни.""",
+    "ru": "Площадь Славы — исторический центр Могилёва, место, где переплелись эпохи.\n\n"
+          "История площади\n"
+          "Она возникла ещё в XVI веке как Торговая площадь на холме у слияния Днепра и Дубровенки. Отсюда расходились главные улицы, а в 1578 году здесь начали строить ратушу — символ городского самоуправления. После вхождения Могилёва в состав Российской империи площадь стала Губернаторской и обрела новый облик по проектам известных архитекторов.\n\n"
+          "Современный облик\n"
+          "Сегодняшний вид площадь приобрела в 1980-х годах, став мемориальным пространством. Её центром является комплекс «Борцам за Советскую власть» со скульптурой Победы и Вечным огнём. Здесь же сохранились старинные здания бывшего окружного суда (ныне краеведческий музей) и городской управы.\n\n"
+          "Значение сегодня\n"
+          "Переименованная в площадь Славы в 2014 году, она остаётся местом памяти и истории, а также главным общественным пространством города, где проходят памятные и городские мероприятия.",
 
-            "en": """Glory Square is the central and one of the most significant historical squares of Mogilev. It combines architecture from different eras and is closely connected with the heroic pages of the city's history.
-History of the square
-Glory Square emerged on the site of the ancient city center. In different periods it had various names: Market Square, Governor’s Square, Soviet Square. Fairs, public meetings, official ceremonies were held here, decrees were announced and important decisions for the city were made.
-In the 17th–18th centuries the square was formed as the administrative center of the city with the Town Hall — a symbol of urban self-government during the Magdeburg Law period.
-Architectural appearance
-Today Glory Square is distinguished by its strict and solemn architecture. Its main decoration is the Mogilev Town Hall, restored in the early 21st century. Nearby are former administrative buildings in classical style. The open and symmetrical space emphasizes the memorial character of the square.
-Historical event
-One of the most significant events associated with Glory Square are the events of the Great Patriotic War.
-In July 1941 Mogilev became a key point of defense on the path of the Nazi troops. The city heroically defended itself for about three weeks. Rallies were held on the square where citizens were informed about the beginning of the war and the formation of the people's militia.
-After the liberation of Mogilev in 1944, Glory Square became a place for victory rallies and later a space of memory.
-Modern significance
-Today Glory Square is not only a historical place but also an important cultural center. State holidays, parades, concerts and commemorative events are held here. The square symbolizes courage, resilience and historical memory of the people of Mogilev.""",
+    "en": "Glory Square is the historical center of Mogilev — a place where different eras intertwine.\n\n"
+          "History of the square\n"
+          "It emerged in the 16th century as the Market Square on a hill at the confluence of the Dnieper and Dubrovenka rivers. The main streets branched out from here, and in 1578 the construction of the town hall — a symbol of municipal self-government — began. After Mogilev became part of the Russian Empire, the square was renamed Governor’s Square and reshaped according to projects by prominent architects.\n\n"
+          "Modern appearance\n"
+          "The square acquired its current look in the 1980s when it became a memorial space. Its center features the memorial complex “Fighters for Soviet Power” with the Victory sculpture and the Eternal Flame. Historic buildings of the former district court (now the local history museum) and the city administration have also been preserved here.\n\n"
+          "Present-day significance\n"
+          "Renamed Glory Square in 2014, it remains a place of memory and history, as well as the city’s main public space for commemorative and civic events.",
 
-            "be": """Плошча Славы — цэнтральная і адна з найбольш значных гістарычных плошчаў Магілёва. Яна аб’ядноўвае архітэктуру розных эпох і цесна звязана з гераічнымі старонкамі гісторыі горада.
-Гісторыя плошчы
-Плошча Славы ўзнікла на месцы старажытнага гарадскога цэнтра. У розныя перыяды яна мела розныя назвы: Рынкавая, Губернатарская, Савецкая. Тут праходзілі кірмашы, народныя сходы і афіцыйныя цырымоніі.
-У XVII–XVIII стагоддзях плошча сфарміравалася як адміністрацыйны цэнтр горада з ратушай — сімвалам гарадскога самакіравання ў часы Магдэбургскага права.
-Архітэктурны выгляд
-Сёння Плошча Славы вылучаецца строгай і ўрачыстай архітэктурай. Галоўным упрыгожаннем з’яўляецца Магілёўская ратуша, адноўленая ў пачатку XXI стагоддзя.
-Гістарычныя падзеі
-Асаблівае значэнне плошча набыла ў гады Вялікай Айчыннай вайны. У ліпені 1941 года Магілёў стаў адным з ключавых пунктаў абароны.
-Сучаснае значэнне
-Сёння Плошча Славы — гэта месца памяці і важная грамадская прастора, дзе праводзяцца дзяржаўныя і культурныя мерапрыемствы."""
+    "be": "Плошча Славы — гістарычны цэнтр Магілёва, месца, дзе перапляліся эпохі.\n\n"
+          "Гісторыя плошчы\n"
+          "Яна ўзнікла яшчэ ў XVI стагоддзі як Гандлёвая плошча на ўзвышшы каля зліцця Дняпра і Дубравенкі. Адсюль разыходзіліся галоўныя вуліцы, а ў 1578 годзе тут пачалі будаваць ратушу — сімвал гарадскога самакіравання. Пасля ўваходжання Магілёва ў склад Расійскай імперыі плошча стала Губернатарскай і атрымала новы выгляд паводле праектаў вядомых архітэктараў.\n\n"
+          "Сучасны выгляд\n"
+          "Сённяшні аблік плошча набыла ў 1980-х гадах, стаўшы мемарыяльнай прасторай. Яе цэнтрам з'яўляецца комплекс «Борцам за Савецкую ўладу» са скульптурай Перамогі і Вечным агнём. Тут таксама захаваліся старыя будынкі былога акруговага суда (цяпер краязнаўчы музей) і гарадской управы.\n\n"
+          "Значэнне сёння\n"
+          "Перайменаваная ў плошчу Славы ў 2014 годзе, яна застаецца месцам памяці і гісторыі, а таксама галоўнай грамадскай прасторай горада, дзе праходзяць памятныя і гарадскія мерапрыемствы."
         },
         "photos": [
             "data/Photo/SlavaSquare/SlavaSquare_1.jpg",
             "data/Photo/SlavaSquare/SlavaSquare_2.jpg",
-            "data/Photo/SlavaSquare/SlavaSquare_3.jpg"
+            "data/Photo/SlavaSquare/SlavaSquare_3.jpg",
+            "data/Photo/SlavaSquare/SlavaSquare_4.jpg",
+            "data/Photo/SlavaSquare/SlavaSquare_5.jpg"
         ],
         "lat": 53.894546,
         "lon": 30.330630
@@ -131,6 +111,50 @@ Today Glory Square is not only a historical place but also an important cultural
           "Вежа была маўклівым сведкам ключавых падзей: са сваёй агляднай пляцоўкі ў 1780 годзе горад аглядалі імператрыца Кацярына II разам з аўстрыйскім імператарам Іосіфам II. Ратуша перажыла пажары і войны, але не вытрымала савецкай эпохі: нягледзячы на статус помніка архітэктуры, у 1957 годзе яе знеслі.\n\n"
           "Адраджэнне\n"
           "Толькі праз паўстагоддзя, у 2008 годзе, гістарычная справядлівасць была адноўлена — ратуша была адноўлена на старым месцы ў сваім былым велічы, зноў стаўшы архітэктурнай дамінантай і гонар горада."
+            }
+    },
+
+    "stnicholasmonastery": {
+        "name": {
+            "ru": "Свято-Никольский монастырь",
+            "en": "St. Nicholas Monastery",
+            "be": "Свята-Нікольскі манастыр"
+        },
+
+        "photos": [
+            "data/Photo/StNicholasMonastery/StNicholasMonastery_1.jpg",
+            "data/Photo/StNicholasMonastery/StNicholasMonastery_2.jpg",
+            "data/Photo/StNicholasMonastery/StNicholasMonastery_3.jpg",
+            "data/Photo/StNicholasMonastery/StNicholasMonastery_4.jpg"
+        ],
+
+        "lat": 53.894087,
+        "lon": 30.345152,
+
+        "description": {
+    "ru": "Свято-Никольский монастырь — духовная твердыня с трагической и возрожденной историей, берущей начало в XVII веке.\n\n"
+          "История монастыря\n"
+          "Каменный собор монастыря, построенный в 1669–1672 годах, пережил нападения войск, пожары и периоды запустения. В XVIII веке рядом был построен зимний Онуфриевский храм. Монастырь посещал император Николай II во время пребывания Ставки в Могилёве в 1915–1917 годах.\n\n"
+          "Советский период\n"
+          "В советское время монастырь разделил судьбу многих святынь: его закрыли в 1934 году, в соборе разместили пересыльную тюрьму, а позже — книжную базу.\n\n"
+          "Возрождение и современность\n"
+          "Возрождение началось в 1991 году, когда были обнаружены останки жертв репрессий. Сегодня это действующий женский монастырь, где хранятся почитаемые иконы, включая образ Царственных страстотерпцев. У стен собора покоятся его восстановители — архиепископ Максим (Кроха) и игуменья Евгения. Монастырь остаётся местом, где живая память соединяется с непрерывной молитвой.",
+
+    "en": "St. Nicholas Monastery is a spiritual stronghold with a tragic and revived history dating back to the 17th century.\n\n"
+          "History of the monastery\n"
+          "The stone cathedral, built between 1669 and 1672, survived attacks, fires, and periods of neglect. In the 18th century, the Winter Onuphrius Church was built nearby. Emperor Nicholas II visited the monastery during the headquarters' stay in Mogilev in 1915–1917.\n\n"
+          "Soviet period\n"
+          "During the Soviet era, the monastery shared the fate of many holy sites: it was closed in 1934, the cathedral was used as a transit prison, and later as a book storage.\n\n"
+          "Revival and today\n"
+          "Revival began in 1991, when the remains of repression victims were discovered. Today it is an active women’s monastery, housing revered icons, including the image of the Royal Passion-Bearers. At the cathedral walls rest its restorers — Archbishop Maxim (Krokha) and Abbess Evgenia. The monastery remains a place where living memory merges with continuous prayer.",
+
+    "be": "Свята-Нікольскі манастыр — духоўная крэпасць з трагічнай і адноўленай гісторыяй, што пачалася ў XVII стагоддзі.\n\n"
+          "Гісторыя манастыра\n"
+          "Каменны сабор, пабудаваны ў 1669–1672 гадах, перажыў напады войскаў, пажары і перыяды запусцення. У XVIII стагоддзі пабудавалі побач зімовы храм Ануфрыя. Манастыр наведваў імператар Мікалай II падчас знаходжання Стаўкі ў Магілёве ў 1915–1917 гадах.\n\n"
+          "Савецкі перыяд\n"
+          "У савецкі час манастыр падзяліў лёс многіх святыняў: яго зачынілі ў 1934 годзе, у саборы размяшчалася перасыльная турма, пазней — кніжная база.\n\n"
+          "Адраджэнне і сучаснасць\n"
+          "Адраджэнне пачалося ў 1991 годзе, калі былі знойдзены рэшткі ахвяр рэпрэсій. Сёння гэта дзеючы жаночы манастыр, дзе захоўваюцца шанаваныя іконы, уключаючы абраз Царскіх пакутнікаў. Па сценах сабора спачываюць яго аднаўляльнікі — архіепіскап Максім (Кроха) і ігуменя Еўгенія. Манастыр застаецца месцам, дзе жывая памяць спалучаецца з непарыўнай малітвай."
             }
     },
 
